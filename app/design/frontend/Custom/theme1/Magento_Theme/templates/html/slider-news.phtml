@@ -1,0 +1,35 @@
+<?php
+
+declare(strict_types=1);
+
+/** @var Template block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+
+use Magento\Framework\View\Element\Template;
+
+?>
+
+<div class="news">
+    <strong class="subtitle"><?= $escaper->escapeHtml(__('from fashion world')) ?></strong>
+    <div data-mage-init='{"slickNews":{}}'>
+        <div class="article bg-gray"></div>
+        <div class="article">
+            <p class="article-date">Posted 25 August</p>
+            <p class="article-title">Reveal the brand Shopping Strategy</p>
+            <p class="article-more"><a href="#">read more →</a></p>
+        </div>
+        <div class="article bg-gray"></div>
+        <div class="article">
+            <p class="article-date">Posted 25 August</p>
+            <p class="article-title">Most Expensive Dress in showbiz History</p>
+            <p class="article-more"><a href="#">read more →</a></p>
+        </div>
+        <div class="article bg-gray"></div>
+        <div class="article">
+            <p class="article-date">Posted 25 August</p>
+            <p class="article-title">Reveal the brand Shopping Strategy</p>
+            <p class="article-more"><a href="#">read more →</a></p>
+        </div>
+    </div>
+</div>

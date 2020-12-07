@@ -1,0 +1,105 @@
+//  Newsletter subscription
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .block.newsletter {
+        .field {
+            .control {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    .block.newsletter {
+
+        margin: 0 auto;
+
+        .title {
+            display: block;
+            text-align: center;
+
+            strong {
+                font-size: 24px;
+                font-weight: @font-weight__regular;
+                text-transform: uppercase;
+            }
+        }
+
+        .subtitle {
+            color: #6d6d6d;
+            letter-spacing: 1.5px;
+            font-size: 16px;
+            font-weight: @font-weight__regular;
+            display: block;
+            text-align: center;
+        }
+
+        .form.subscribe {
+            margin-top: 50px;
+        }
+
+        input {
+            background-color: #f9f9f9;
+            border-color: #f9f9f9;
+            font-style: @font-style__emphasis;
+            padding: 28px;
+            margin-right: 0;
+        }
+
+        //.action {
+        //    .subscribe {
+        //        .lib-button (
+        //            @_button-background: #f9f9f9,
+        //            @_button-border: #f9f9f9
+        //        );
+        //        text-transform: uppercase;
+        //    }
+        //}
+    }
+
+    .block.newsletter .action.subscribe {
+        background-color: #f9f9f9;
+        border-color: #f9f9f9;
+        padding: 20px;
+
+        span {
+            text-transform: uppercase;
+
+            a {
+                color: #cc0d0d;
+            }
+        }
+    }
+}
+
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .block.newsletter {
+        max-width: 60%;
+        width: auto;
+
+        .field.newsletter {
+            max-width: 530px;
+        }
+
+        .form.subscribe {
+            > .field,
+            > .actions {
+                float: none;
+            }
+        }
+    }
+}
+
+

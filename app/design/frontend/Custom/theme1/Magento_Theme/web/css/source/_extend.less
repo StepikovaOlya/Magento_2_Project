@@ -1,0 +1,135 @@
+
+& when (@media-common = true) {
+
+    // Minicart-icon
+    .page-header {
+        .minicart-wrapper {
+            .action.showcart {
+                .lib-icon-font(
+                    @_icon-font-content: '\f290',
+                    @_icon-font: @font-family-fontello,
+                    @_icon-font-size: 20px,
+                    @_icon-font-color: #000000
+                );
+            }
+        }
+    }
+
+    // Header background
+    .page-header {
+        .panel.wrapper {
+            border-bottom: 1px solid @color-white !important;
+            .lib-css(background-color, @color-white) !important;
+        }
+    }
+
+    // Navigation
+    .nav-sections {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+
+
+    // Footer
+    span.store-name {
+        font-weight: @font-weight__bold;
+        font-size: 30px;
+        display: block;
+        text-align: center;
+
+        &:before {
+            border-top: 2px solid #eff0f2;
+            content: '';
+            display: block;
+            height: 2px;
+            margin: 0 auto 90px auto;
+            width: 60%;
+
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            background: #cc0d0d;
+            border-radius: 5px;
+            width: 80px;
+            height: 3px;
+            margin: 0 auto;
+        }
+    }
+
+
+    .store-contact {
+        color: #6d6d6d;
+        font-weight: @font-weight__bold;
+        font-size: 16px;
+        margin-top: 45px;
+        text-align: center;
+    }
+
+    .store-nav {
+        margin-top: 50px;
+        text-align: center;
+
+        span {
+            a {
+                margin-right: 35px;
+                .lib-link(
+                    @_link-color: @color-black,
+                    @_link-color-visited: @color-black,
+                    @_link-color-hover: @color-black,
+                    @_link-text-decoration-hover: false,
+                    @_link-color-active: @color-black,
+                    @_link-text-decoration-active: false
+                );
+            }
+        }
+
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 300px;
+
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        li {
+            list-style-type: none;
+
+            .fab {
+                color: #cccccc;
+                font-size: 24px;
+            }
+        }
+    }
+
+}
+
+//
+//  Desktop
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    // Footer
+
+    .page-footer,
+    .copyright {
+        color: #000000;
+        .lib-css(background-color, @color-white);
+        font-size: 14px;
+    }
+
+
+}
+
+

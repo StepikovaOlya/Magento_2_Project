@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+/** @var Template block */
+
+use Magento\Framework\View\Element\Template;
+
+?>
+
+<div class="slider">
+    <div data-mage-init='{"slickTheme2":{}}'>
+    <div class="slider-item">
+        <div class="title"><?= $block->escapeHtml(__('Collection')) ?>
+            <span><?= $block->escapeHtml(__('2018')) ?></span>
+        </div>
+        <strong class="subtitle"><?= $escaper->escapeHtml(__('New Arrivals')) ?></strong>
+        <p class="intro"><a class="arrow" href="#">Discover more items →</a></p>
+    </div>
+    <div class="slider-item"></div>
+    <div class="slider-item"></div>
+</div>
+</div>
+
