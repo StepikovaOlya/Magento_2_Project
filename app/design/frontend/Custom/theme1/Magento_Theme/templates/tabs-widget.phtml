@@ -1,0 +1,31 @@
+<?php
+
+declare(strict_types=1);
+
+/** @var Template block */
+
+use Magento\Framework\View\Element\Template;
+
+?>
+
+<div class="trending">
+    <p class="trending-title">Trending Items</p>
+    <div class="product data items" data-mage-init='{"mage/tabs": {"openedState": "active", "animate": {"duration": 100}, "active": 0}}'>
+        <div class="item title" data-role="collapsible">
+            <a class="switch" href="#tab-all-items" data-toggle="trigger">all items</a>
+        </div>
+        <div id="tab-all-items" class="item content" data-role="content">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="5" template="Magento_CatalogWidget::product/widget/content/gridTheme1.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>
+        <div class="item title" data-role="collapsible">
+            <a class="switch" href="#tab-clothing" data-toggle="trigger">clothing</a>
+        </div>
+        <div id="tab-clothing" class="item content" data-role="content">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="5" template="Magento_CatalogWidget::product/widget/content/gridTheme1.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>
+        <div class="item title" data-role="collapsible">
+            <a class="switch" href="#tab-foot-wear" data-toggle="trigger">foot wear</a>
+        </div>
+        <div id="tab-foot-wear" class="item content" data-role="content">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="5" template="Magento_CatalogWidget::product/widget/content/gridTheme1.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>
+        <div class="item title" data-role="collapsible">
+            <a class="switch" href="#tab-accessories" data-toggle="trigger">accessories</a>
+        </div>
+        <div id="tab-accessories" class="item content" data-role="content">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="5" template="Magento_CatalogWidget::product/widget/content/gridTheme1.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>
+    </div>
+</div>

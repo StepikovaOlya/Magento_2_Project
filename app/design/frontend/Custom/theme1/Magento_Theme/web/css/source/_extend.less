@@ -28,6 +28,54 @@
         }
     }
 
+    // Tabs widget
+    .trending {
+        text-align: center;
+
+        .trending-title {
+            font-weight: @font-weight__light;
+            text-transform: uppercase;
+            font-size: 30px;
+            display: inline-block;
+
+            &:after {
+                content: '';
+                display: block;
+                background: #cc0d0d;
+                border-radius: 5px;
+                width: 80%;
+                height: 3px;
+                margin: 0 auto;
+            }
+        }
+
+        .product.data.items {
+            > .item.content {
+                border: 1px solid transparent;
+            }
+
+            > .item.title > .switch {
+                border: 0;
+                .lib-css(background, transparent);
+            }
+
+        }
+
+        .item.title {
+            text-transform: uppercase;
+
+            a {
+                .lib-link(
+                    @_link-color: @color-custom-grey1,
+                    @_link-color-visited: @color-custom-grey1,
+                    @_link-color-hover: @color-black,
+                    @_link-text-decoration-hover: false,
+                    @_link-color-active: @color-black,
+                    @_link-text-decoration-active: false
+                );
+            }
+        }
+    }
 
     // Footer
     span.store-name {
