@@ -10,7 +10,7 @@ define([
             slickOptions: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                autoplay: false,
+                autoplay: true,
                 autoplaySpeed: 1000,
                 arrows: false,
                 dots: true,
@@ -20,13 +20,19 @@ define([
 
                 responsive: [
                     {
+                        breakpoint: 1024,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                        }
+                    },
+                    {
                         breakpoint: 600,
                         settings: {
                             arrows: false,
                             dots: false,
                             centerMode: true,
                             centerPadding: '40px',
-                            slidesToShow: 1
                         }
                     },
                     {
@@ -36,7 +42,6 @@ define([
                             dots: false,
                             centerMode: true,
                             centerPadding: '40px',
-                            slidesToShow: 1
                         }
                     }
                 ]

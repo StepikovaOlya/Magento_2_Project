@@ -1,12 +1,16 @@
+//
+//  Common
+//  _____________________________________________
 
 & when (@media-common = true) {
 
     // Minicart-icon
+
     .page-header {
         .minicart-wrapper {
             .action.showcart {
                 .lib-icon-font(
-                    @_icon-font-content: '\f290',
+                    @_icon-font-content: '\f23d',
                     @_icon-font: @font-family-fontello,
                     @_icon-font-size: 20px,
                     @_icon-font-color: #000000
@@ -16,22 +20,13 @@
     }
 
     // Header background
+
     .page-header {
         .panel.wrapper {
             border-bottom: 1px solid @color-white !important;
             .lib-css(background-color, @color-white) !important;
         }
     }
-
-    // Navigation
-    .nav-sections {
-        display: none;
-    }
-
-    .nav-toggle {
-        display: none;
-    }
-
 
 
     // Footer
@@ -72,7 +67,7 @@
     }
 
     .store-nav {
-        margin-top: 50px;
+        margin: 50px 0;
         text-align: center;
 
         span {
@@ -110,6 +105,12 @@
                 font-size: 24px;
             }
         }
+    }
+
+    .copyright {
+        color: #000000;
+        .lib-css(background-color, @color-white);
+        font-size: 14px;
     }
 
 }

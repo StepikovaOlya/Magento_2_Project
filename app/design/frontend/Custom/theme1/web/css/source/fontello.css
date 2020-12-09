@@ -1,4 +1,6 @@
-
+.icon-torso:before { content: '\e800'; }
+.icon-search:before { content: '\e801'; }
+.icon-heart-empty:before { content: '\e802'; }
+.icon-opencart:before { content: '\f23d'; }
 .icon-shopping-bag:before { content: '\f290'; }
-.icon-torso:before { content: '\e01c'; }
-.icon-search:before { content: '🔍'; } /* '\1f50d' */
+.icon-user-o:before { content: '\f2c0'; }

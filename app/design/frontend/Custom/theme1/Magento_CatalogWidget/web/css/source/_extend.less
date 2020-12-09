@@ -1,0 +1,168 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+
+    .block-content {
+        text-align: center;
+
+        .subtitle {
+            font-weight: @font-weight__light;
+            text-transform: uppercase;
+            font-size: 30px;
+            display: inline-block;
+
+            &:after {
+                content: '';
+                display: block;
+                background: #cc0d0d;
+                border-radius: 5px;
+                width: 80%;
+                height: 3px;
+                margin: 0 auto;
+            }
+        }
+
+        .trending-categories {
+            padding-left: 0;
+            margin: 10px 0;
+
+            li {
+                list-style-type: none;
+                text-transform: uppercase;
+
+                a {
+                    .lib-link(
+                        @_link-color: @color-custom-grey1,
+                        @_link-color-visited: @color-custom-grey1,
+                        @_link-color-hover: @color-black,
+                        @_link-text-decoration-hover: false,
+                        @_link-color-active: @color-black,
+                        @_link-text-decoration-active: false
+                    );
+                }
+            }
+        }
+
+        .slick-prev.slick-arrow {
+            height: max-content;
+            width: max-content;
+            left: -50px;
+            top: 150px;
+
+            &:before {
+                font-size: 50px;
+                color: #cccccc;
+            }
+        }
+
+        .slick-next.slick-arrow {
+            height: max-content;
+            width: max-content;
+            top: 150px;
+            right: -50px;
+
+            &:before {
+                font-size: 50px;
+                color: #cccccc;
+            }
+        }
+
+
+        .product-item-details {
+            .action.view {
+                display: none;
+            }
+
+            .price-label {
+                display: none;
+            }
+        }
+
+        .product-item-inner {
+            .product-item-actions {
+                .actions-primary {
+                    form {
+                        button {
+                            background: #ffffff;
+                            border: none;
+
+                            span {
+                                color: #000000;
+                                text-transform: uppercase;
+                                font-weight: @font-weight__regular;
+
+                                .fas {
+                                    margin-right: 1em;
+                                }
+                            }
+                        }
+                    }
+
+                    .actions-secondary {
+                        .action.towishlist {
+                            a {
+                                &:before {
+                                    .lib-icon-font(
+                                        @_icon-font-content: '\e802',
+                                        @_icon-font: @font-family-fontello
+                                    );
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .actions-secondary {
+                    .action.tocompare {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+//
+//  Desktop
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+
+    .block-content {
+
+        .trending-categories {
+            .lib-vendor-prefix-display(
+                @_value: flex
+            );
+            justify-content: space-between;
+            max-width: 550px;
+            margin: 20px auto;
+        }
+
+        .product-item-inner {
+            .product-item-actions {
+                background: transparent;
+                margin-top: -180px;
+
+                .actions-secondary {
+                    .action.towishlist {
+                        background: #ffffff;
+                        border-left: 1px solid #f0f1f3;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+}
+
+

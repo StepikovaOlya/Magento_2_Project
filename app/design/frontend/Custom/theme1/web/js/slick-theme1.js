@@ -10,15 +10,22 @@ define([
             slickOptions: {
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                autoplay: false,
+                autoplay: true,
                 autoplaySpeed: 2000,
                 arrows: true,
+                dots: false,
                 responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 3
+                        }
+                    },
                     {
                         breakpoint: 600,
                         settings: {
-                            arrows: true,
-                            dots: false,
+                            arrows: false,
                             slidesToShow: 2
                         }
                     },
@@ -26,8 +33,7 @@ define([
                         breakpoint: 480,
                         settings: {
                             arrows: false,
-                            dots: false,
-                            slidesToShow: 2
+                            slidesToShow: 1
                         }
                     }
                 ]
