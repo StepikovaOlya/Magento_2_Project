@@ -11,13 +11,13 @@
         margin-left: calc(~"50% - 50vw");
 
         .slider-item {
-            background-color: #eff0f2;
+            .lib-css(background-color, @color-custom-grey2);
             height: 500px;
             text-align: center;
             padding-top: 100px;
 
             .title {
-                color: #ffffff;
+                .lib-css(color, @color-white);
                 text-transform: uppercase;
                 font-size: 42px;
                 opacity: 0.5;
@@ -36,7 +36,7 @@
                 &:after {
                     content: '';
                     display: block;
-                    background: #cc0d0d;
+                    background: @color-custom-red1;
                     border-radius: 5px;
                     width: 100%;
                     height: 2px;
@@ -106,7 +106,7 @@
     .featured {
 
         .featured-categories {
-            background-color: #eff0f2;
+            .lib-css(background-color, @color-custom-grey2);
             padding: 50px 0;
             margin-bottom: 20px;
             text-align: center;
@@ -119,7 +119,7 @@
             display: inline-block;
 
             :after {
-                background: #ffffff;
+                background: @color-white;
                 content: '';
                 display: block;
                 height: 30px;
@@ -149,7 +149,7 @@
         margin: 50px 0;
 
         .bg-gray {
-            background-color: #eff0f2;
+            .lib-css(background-color, @color-custom-grey2);
             height: 200px;
         }
 
@@ -173,12 +173,12 @@
             }
 
             .content-text {
-                color: #8c8c8c;
+                .lib-css(color, @color-custom-grey3);
                 text-align: justify;
             }
 
             .content-more {
-                color: #cc0d0d;
+                .lib-css(color, @color-custom-red1);
                 font-weight: @font-weight__bold;
                 text-transform: uppercase;
 
@@ -196,7 +196,7 @@
             }
 
             .content-shadow {
-                color: #fafafb;
+                .lib-css(color, @color-custom-grey4);
                 font-size: 60px;
                 font-weight: @font-weight__bold;
                 text-align: center;
@@ -223,7 +223,7 @@
             &:after {
                 content: '';
                 display: block;
-                background: #cc0d0d;
+                background: @color-custom-red1;
                 border-radius: 5px;
                 width: 80%;
                 height: 3px;
@@ -232,13 +232,13 @@
         }
 
         .bg-gray {
-            background-color: #eff0f2;
+            .lib-css(background-color, @color-custom-grey2);
             height: 130px;
         }
 
         .article {
             .article-date {
-                color: #b2b2b2;
+                .lib-css(color, @color-custom-grey5);
                 font-size: 14px;
             }
 
@@ -249,7 +249,7 @@
             }
 
             .article-more {
-                color: #cc0d0d;
+                .lib-css(color, @color-custom-red1);
                 font-weight: @font-weight__bold;
                 font-size: 12px;
                 text-transform: uppercase;
