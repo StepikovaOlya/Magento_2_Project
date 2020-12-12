@@ -15,6 +15,21 @@
                     @_icon-font-size: 20px,
                     @_icon-font-color: #000000
                 );
+                .counter.qty {
+                    .lib-css(color, @color-black);
+                    .lib-css(background-color, @color-white);
+
+                    .counter-number {
+                        text-shadow: none;
+                        &:before {
+                            content: '( ';
+
+                        }
+                        &:after {
+                            content: ' )';
+                        }
+                    }
+                }
             }
         }
     }
