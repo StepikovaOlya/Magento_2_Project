@@ -2,15 +2,24 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <move element="page.top" destination="header-wrapper" after="logo"/>
+        <move element="minicart" destination="header-wrapper" after="page.top" />
+        <referenceContainer name="header-wrapper">
+            <container name="links-wrapper" as= "linksWrapper" label="Links wrapper" htmlTag="div" htmlClass="panel header"/>
+        </referenceContainer>
+        <move element="header.links" destination="links-wrapper"/>
+        <move element="top.search" destination="header-wrapper" after="-"/>
+        <referenceBlock name="header" remove="true"/>
         <referenceBlock name="register-link" remove="true"/>
-        <move element="top.search" destination="header.panel" before="-"/>
-        <move element="minicart" destination="header.panel" after="-"/>
-        <move element="logo" destination="header.panel" after="-"/>
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="wish-list-link" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
         <referenceBlock name="footer_links" remove="true"/>
         <referenceBlock name="catalog.compare.link" remove="true"/>
         <referenceBlock name="form.subscribe" remove="true"/>
         <referenceContainer name="footer" label="Footer" htmlTag="div" htmlClass="footer-content">
-            <block class="Magento\Framework\View\Element\Template" name="store.name" template="Magento_Theme::text.phtml">
+            <block class="Magento\Framework\View\Element\Template" name="store.name"
+                   template="Magento_Theme::text.phtml">
                 <arguments>
                     <argument translate="true" name="text" xsi:type="string">StoreNix</argument>
                     <argument name="tag" xsi:type="string">span</argument>

@@ -4,6 +4,12 @@
 
 & when (@media-common = true) {
 
+    // Logo
+
+    .logo {
+        margin-left: 25%;
+    }
+
     // Minicart-icon
 
     .page-header {
@@ -15,16 +21,19 @@
                     @_icon-font-size: 20px,
                     @_icon-font-color: #000000
                 );
+
                 .counter.qty {
                     .lib-css(color, @color-black);
                     .lib-css(background-color, @color-white);
 
                     .counter-number {
                         text-shadow: none;
+
                         &:before {
                             content: '( ';
 
                         }
+
                         &:after {
                             content: ' )';
                         }
@@ -42,6 +51,18 @@
             .lib-css(background-color, @color-white) !important;
         }
     }
+
+    .nav-sections {
+        .lib-css(background, @color-white);
+    }
+
+
+    // Breadcrumbs
+
+    .breadcrumbs {
+        display: none;
+    }
+    
 
     // Tabs widget
     .trending {
@@ -183,6 +204,42 @@
 //  ---------------------------------------------
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    // Header
+
+    .logo {
+        margin: 0;
+    }
+
+    .page-header {
+        .header.content {
+            .lib-vendor-prefix-display(
+                @_value: flex
+            );
+            justify-content: space-between;
+        }
+
+        .panel.header {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    // Navigarion
+
+    .nav-sections {
+        margin-top: -5px;
+    }
+
+    // Minicart-icon
+
+    .page-header {
+        .minicart-wrapper {
+            .action.showcart {
+                margin-right: 20px;
+            }
+        }
+    }
 
     // Footer
 
