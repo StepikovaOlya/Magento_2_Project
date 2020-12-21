@@ -1,15 +1,12 @@
 <?php
-
-declare(strict_types=1);
-
-/** @var Template block */
-
-use Magento\Framework\View\Element\Template;
-
+/**
+ * @var Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
 ?>
 
 <div class="slider">
-    <div data-mage-init='{"slickTheme2":{}}'>
+    <div data-mage-init='{"slickTheme1":{"slickOptions":{"slidesToShow":1, "arrows": false, "dots": true, "dotsClass": "slider-dots", "responsive": [{"breakpoint":1024,"settings":{"dots": true, "arrows": false}}, {"breakpoint":600,"settings":{"dots": false, "arrows": false}}, {"breakpoint":480,"settings":{"dots": false, "arrows": false}}]}}}'>
     <div class="slider-item">
         <div class="title"><?= $block->escapeHtml(__('Collection')) ?>
             <span><?= $block->escapeHtml(__('2018')) ?></span>

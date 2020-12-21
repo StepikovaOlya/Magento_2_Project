@@ -1,18 +1,13 @@
 <?php
-
-declare(strict_types=1);
-
-/** @var Template block
+/**
+ * @var Magento\Framework\View\Element\Template $block
  * @var \Magento\Framework\Escaper $escaper
  */
-
-use Magento\Framework\View\Element\Template;
-
 ?>
 
 <div class="news">
     <strong class="subtitle"><?= $escaper->escapeHtml(__('from fashion world')) ?></strong>
-    <div data-mage-init='{"slickNews":{}}'>
+    <div data-mage-init='{"slickTheme1":{"slickOptions":{"arrows": false, "dots": true, "dotsClass": "slider-dots", "responsive": [{"breakpoint":1024,"settings":{"slidesToShow": 3, "dots": true, "arrows": false}}, {"breakpoint":600,"settings":{"slidesToShow": 2, "dots": false, "arrows": false}}, {"breakpoint":480,"settings":{"slidesToShow": 1, "dots": false, "arrows": false}}]}}}'>
         <div class="article bg-gray"></div>
         <div class="article">
             <p class="article-date">Posted 25 August</p>
