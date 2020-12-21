@@ -171,23 +171,78 @@
 
     }
 
-    .social-icons {
-        display: flex;
+    ul.social-icons {
+        .lib-vendor-prefix-display(
+            @_value: flex
+        );
         justify-content: space-between;
+        list-style-type: none;
         margin: 0 auto;
         max-width: 300px;
 
-        ul {
-            margin-left: 0;
-            padding-left: 0;
+        li.icons-facebook {
+            a {
+                .lib-icon-font(
+                    @_icon-font-content: '\f09a',
+                    @_icon-font: @font-family-fontello,
+                    @_icon-font-size: 24px,
+                    @_icon-font-color: @color-custom-social-icon
+                );
+            }
         }
 
-        li {
-            list-style-type: none;
+        li.icons-vimeo {
+            a {
+                .lib-icon-font(
+                    @_icon-font-content: '\f27d',
+                    @_icon-font: @font-family-fontello,
+                    @_icon-font-size: 24px,
+                    @_icon-font-color: @color-custom-social-icon
+                );
+            }
+        }
 
-            .fab {
-                color: #cccccc;
-                font-size: 24px;
+        li.icons-gplus {
+            a {
+                .lib-icon-font(
+                    @_icon-font-content: '\f0d5',
+                    @_icon-font: @font-family-fontello,
+                    @_icon-font-size: 24px,
+                    @_icon-font-color: @color-custom-social-icon
+                );
+            }
+        }
+
+        li.icons-twitter {
+            a {
+                .lib-icon-font(
+                    @_icon-font-content: '\f099',
+                    @_icon-font: @font-family-fontello,
+                    @_icon-font-size: 24px,
+                    @_icon-font-color: @color-custom-social-icon
+                );
+            }
+        }
+
+        li.icons-pinterest {
+            a {
+                .lib-icon-font(
+                    @_icon-font-content: '\f231',
+                    @_icon-font: @font-family-fontello,
+                    @_icon-font-size: 24px,
+                    @_icon-font-color: @color-custom-social-icon
+                );
+            }
+        }
+
+        li.icons-youtube {
+            a {
+                .lib-icon-font(
+                    @_icon-font-content: '\f16a',
+                    @_icon-font: @font-family-fontello,
+                    @_icon-font-size: 24px,
+                    @_icon-font-color: @color-custom-social-icon
+                );
             }
         }
     }

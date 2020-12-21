@@ -1,6 +1,12 @@
 .icon-torso:before { content: '\e800'; }
 .icon-search:before { content: '\e801'; }
 .icon-heart-empty:before { content: '\e802'; }
+.icon-facebook:before { content: '\f09a'; }
+.icon-gplus:before { content: '\f0d5'; }
+.icon-youtube-play:before { content: '\f16a'; }
+.icon-pinterest:before { content: '\f231'; }
 .icon-opencart:before { content: '\f23d'; }
+.icon-vimeo:before { content: '\f27d'; }
 .icon-shopping-bag:before { content: '\f290'; }
 .icon-user-o:before { content: '\f2c0'; }
+.icon-twitter:before { content: '\f099'; }
