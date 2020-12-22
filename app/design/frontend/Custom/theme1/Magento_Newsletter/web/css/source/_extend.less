@@ -5,7 +5,10 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
+
     .block.newsletter {
+        margin: 0 auto;
+
         .field {
             .control {
                 &:before {
@@ -13,29 +16,25 @@
                 }
             }
         }
-    }
 
-    .block.newsletter {
-
-        margin: 0 auto;
-
-        .title {
-            display: block;
+        .title-new {
+            margin-top: 100px;
             text-align: center;
 
             strong {
-                font-size: 24px;
-                font-weight: @font-weight__regular;
+                .lib-font-size(18);
+                .lib-css(font-weight, @font-weight__regular);
+                letter-spacing: 1px;
                 text-transform: uppercase;
             }
         }
 
         .subtitle {
-            color: #6d6d6d;
-            letter-spacing: 1.5px;
-            font-size: 16px;
-            font-weight: @font-weight__regular;
+            .lib-css(color, @color-custom-grey3);
+            .lib-css(font-weight, @font-weight__regular);
+            .lib-font-size(14);
             display: block;
+            letter-spacing: 1px;
             text-align: center;
         }
 
@@ -44,27 +43,36 @@
         }
 
         input {
-            background-color: #f9f9f9;
-            border-color: #f9f9f9;
-            font-style: @font-style__emphasis;
-            padding: 28px;
+            .lib-css(background-color, @color-custom-grey4);
+            .lib-css(border-color, @color-custom-grey4);
+            .lib-css(font-style, @font-style__emphasis);
+            padding: 28px 10px;
             margin-right: 0;
         }
-    }
 
-    .block.newsletter .action.subscribe {
-        background-color: #f9f9f9;
-        border-color: #f9f9f9;
-        padding: 20px;
+        .action.subscribe {
+            .lib-css(background-color, @color-custom-grey4);
+            .lib-css(border-color, @color-custom-grey4);
+            padding: 20px;
 
-        span {
-            text-transform: uppercase;
+            :after {
+                .lib-css(color, @color-custom-red1);
+                .lib-css(font-weight, @font-weight__heavier * 2);
+                .lib-font-size(18);
+                content: '→';
+            }
 
-            a {
-                color: #cc0d0d;
+            span {
+                .lib-css(color, @color-black);
+                .lib-css(font-weight, @font-weight__heavier);
+                text-transform: uppercase;
+
+
             }
         }
     }
+
+
 }
 
 
@@ -75,11 +83,27 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
     .block.newsletter {
-        max-width: 60%;
+        max-width: 70%;
         width: auto;
+
+        .title-new {
+            strong {
+                .lib-font-size(24);
+                letter-spacing: 1.2px;
+            }
+        }
+
+        .subtitle {
+            .lib-font-size(16);
+            letter-spacing: 1.5px;
+        }
 
         .field.newsletter {
             max-width: 530px;
+        }
+
+        input {
+            padding: 28px;
         }
 
         .form.subscribe {
@@ -89,6 +113,8 @@
             }
         }
     }
+
+
 }
 
 

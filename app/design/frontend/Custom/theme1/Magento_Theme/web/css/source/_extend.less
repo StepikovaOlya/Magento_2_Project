@@ -19,7 +19,7 @@
                     @_icon-font-content: '\f23d',
                     @_icon-font: @font-family-fontello,
                     @_icon-font-size: 20px,
-                    @_icon-font-color: #000000
+                    @_icon-font-color: @color-black
                 );
 
                 .counter.qty {
@@ -45,17 +45,9 @@
 
     // Header background
 
-    .page-header {
-        .panel.wrapper {
-            border-bottom: 1px solid @color-white !important;
-            .lib-css(background-color, @color-white) !important;
-        }
-    }
-
     .nav-sections {
         .lib-css(background, @color-white);
     }
-
 
     // Breadcrumbs
 
@@ -72,13 +64,14 @@
         .trending-title {
             font-weight: @font-weight__light;
             text-transform: uppercase;
+            .lib-font-size(30);
             font-size: 30px;
             display: inline-block;
 
             &:after {
+                .lib-css(background-color, @color-custom-red1);
                 content: '';
                 display: block;
-                background: #cc0d0d;
                 border-radius: 5px;
                 width: 80%;
                 height: 3px;
@@ -92,8 +85,9 @@
             }
 
             > .item.title > .switch {
-                border: 0;
                 .lib-css(background, transparent);
+                border: 0;
+
             }
 
         }
@@ -116,13 +110,13 @@
 
     // Footer
     span.store-name {
-        font-weight: @font-weight__bold;
-        font-size: 30px;
+        .lib-css(font-weight, @font-weight__bold);
+        .lib-font-size(30);
         display: block;
         text-align: center;
 
         &:before {
-            border-top: 2px solid #eff0f2;
+            .lib-css(border-top, 2px solid @color-custom-grey2);
             content: '';
             display: block;
             height: 2px;
@@ -132,9 +126,9 @@
         }
 
         &:after {
+            .lib-css(background-color, @color-custom-red1);
             content: '';
             display: block;
-            background: #cc0d0d;
             border-radius: 5px;
             width: 80px;
             height: 3px;
@@ -144,9 +138,9 @@
 
 
     .store-contact {
-        color: #6d6d6d;
-        font-weight: @font-weight__bold;
-        font-size: 16px;
+        .lib-css(color, @color-custom-contact);
+        .lib-css(font-weight, @font-weight__bold);
+        .lib-font-size(16);
         margin-top: 45px;
         text-align: center;
     }
@@ -303,7 +297,7 @@
     .copyright {
         .lib-css(color, @color-black);
         .lib-css(background-color, @color-white);
-        font-size: 14px;
+        .lib-font-size(14);
     }
 
 

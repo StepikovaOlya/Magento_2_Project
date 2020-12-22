@@ -1,21 +1,14 @@
+// /**
+//  * Magento_CatalogSearch
+//  * Mobile's styles were used for desktop
+//  */
+
+
 //
 //  Desktop
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-
-    .search {
-        .fieldset {
-            .control {
-                .addon {
-                    input {
-                        flex-basis: auto;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
 
     .block-search {
         padding-left: 0;
@@ -37,9 +30,9 @@
 
 
         .label {
+            .lib-css(color, @color-black);
             .lib-visually-hidden-reset();
             position: absolute;
-            color: @color-black;
 
             &:not(.active) {
                 + .control {

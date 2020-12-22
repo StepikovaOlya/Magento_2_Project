@@ -1,15 +1,14 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * Magento Catalog Widget
+ * The template was overridden: added attribute "data-mage-init" to list,
+ * moved product name and product price after reviews
  */
-
 use Magento\Framework\App\Action\Action;
 
-/** @var \Magento\CatalogWidget\Block\Product\ProductsList $block
- * @var \Magento\Framework\Escaper $escaper
- */
+/** @var \Magento\CatalogWidget\Block\Product\ProductsList $block */
 ?>
+
 <?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())) : ?>
     <?php
     $type = 'widget-product-grid';
