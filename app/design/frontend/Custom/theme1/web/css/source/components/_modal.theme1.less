@@ -1,0 +1,45 @@
+// Magento_Modal widget
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .modals-wrapper {
+        .modal-inner-wrap {
+            width: 300px;
+            .modal-header {
+                .modal-title {
+                    display: none;
+                    border-bottom: none;
+                }
+            }
+
+            .modal-content {
+                margin: 0 auto;
+            }
+
+            .modal-footer {
+                display: none;
+            }
+
+        }
+    }
+}
+
+//
+//  Desktop
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .modals-wrapper {
+        .modal-inner-wrap {
+            .modal-footer {
+                border-top: none;
+            }
+
+        }
+    }
+}

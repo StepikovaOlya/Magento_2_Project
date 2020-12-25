@@ -1,0 +1,82 @@
+//
+//  Common
+//  _____________________________________________
+
+//
+// Styles for gift registry list
+// -------------------------------------------------
+
+& when (@media-common = true) {
+    .add-to-giftr-new {
+        .togiftr-new {
+            a {
+                .lib-css(border, 1px solid @color-white);
+                .lib-css(box-shadow, 0 2px 8px 0 rgba(0, 0, 0, 0.2));
+                .lib-font-size(18);
+                .lib-link(
+                    @_link-color: @color-black,
+                    @_link-color-visited: @color-black,
+                    @_link-color-hover: @color-black,
+                    @_link-text-decoration-hover: false,
+                    @_link-color-active: @color-black,
+                    @_link-text-decoration-active: false
+                );
+                display: block;
+                margin: 5px 0;
+                padding: 10px;
+
+                &:after {
+                    .lib-css(color, @color-custom-grey3);
+                    .lib-css(font-weight, @font-weight__bold);
+                    font-size: inherit;
+                    line-height: inherit;
+                    content: '\e622';
+                    font-family: 'luma-icons';
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .giftr-dropdown {
+            .registry-list {
+                .registries {
+                    .lib-css(border, 1px solid @color-white);
+                    .lib-css(box-shadow, 0 2px 8px 0 rgba(0, 0, 0, 0.2));
+                    .lib-font-size(16);
+                    padding: 10px;
+
+                    .label {
+                        display: block;
+                    }
+                }
+
+                a {
+                    .lib-css(background-color, @color-black);
+                    .lib-css(border, 1px solid @color-black);
+                    .lib-css(box-shadow, 0 2px 8px 0 rgba(0, 0, 0, 0.2));
+                    .lib-css(font-weight, @font-weight__heavier);
+                    .lib-font-size(18);
+                    .lib-link(
+                        @_link-color: @color-white,
+                        @_link-color-visited: @color-white,
+                        @_link-color-hover: @color-black,
+                        @_link-text-decoration-hover: false,
+                        @_link-color-active: @color-black,
+                        @_link-text-decoration-active: false
+                    );
+                    display: block;
+                    margin: 5px 0;
+                    padding: 10px;
+
+                    &:hover, &:focus {
+                        .lib-css(background-color, @color-custom-grey3);
+                        .lib-css(border, 1px solid @color-custom-grey3);
+
+                    }
+                }
+            }
+        }
+    }
+
+
+}
