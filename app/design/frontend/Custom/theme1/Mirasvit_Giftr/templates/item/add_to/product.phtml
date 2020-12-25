@@ -1,5 +1,12 @@
 <?php
 /**
+ * Mirasvit Add to gift registry product
+ * The template was overridden: added modal widget to the gift registry link,
+ * moved dropdown list into popup content, changed the title of the dropdown list in popup content
+ */
+?>
+<?php
+/**
  * @var $block \Mirasvit\Giftr\Block\Item\Add
  */
 ?>
@@ -14,7 +21,7 @@ if ($block->getProduct()->getUseInGiftr()):
 
     $isValidationNotRequired = $block->isValidationNotRequired();
     $isShowRegistryList = $block->isShowRegistryList();
-?>
+    ?>
 
     <div class="add-to-giftr" data-block="addtogiftr" data-role="add-to-links">
         <?php if ($block->getMode() === Mirasvit\Giftr\Block\Item\Add::MODE_CONFIGURE): ?>
@@ -25,11 +32,26 @@ if ($block->getProduct()->getUseInGiftr()):
             </a>
         <?php else: ?>
             <div class="giftr-link togiftr" data-bind="scope: 'giftr-addto__form'">
-                <a href="#" id="addto-giftr" class="action togiftr link-giftr" data-bind="click: defineBehaviour"><span><?= $block->getLabel() ?></span>
+                <a href="#" id="addto-giftr-new" class="action togiftr link-giftr" data-trigger="trigger-one" data-bind="click: defineBehaviour"><span><?= $block->getLabel() ?></span>
                 </a>
             </div>
-
-            <?= $block->getChildHtml('giftrDropdown') ?>
+            <div data-bind="mageInit: {
+                'Magento_Ui/js/modal/modal':{
+                    'type': 'popup',
+                    'innerScroll': true,
+                    'modalClass': 'gift-regisry-theme',
+                    'title': 'Select Gift Registry',
+                    'trigger': '[data-trigger=trigger-one]',
+                    'responsive': true
+                }}">
+                <div class="content add-to-giftr-new">
+                    <div class="giftr-link togiftr-new" data-bind="scope: 'giftr-addto__form'">
+                        <a href="#" id="addto-giftr" class="action togiftr-new link-giftr" data-bind="click: defineBehaviour"><span><?= __('Select Gift Registry') ?></span>
+                        </a>
+                    </div>
+                    <?= $block->getChildHtml('giftrDropdown') ?>
+                </div>
+            </div>
         <?php endif ?>
         <input type="hidden" name="product_id" id="product_id" value="<?= $block->getProduct()->getId() ?>" />
     </div>
