@@ -32,16 +32,16 @@ if ($block->getProduct()->getUseInGiftr()):
             </a>
         <?php else: ?>
             <div class="giftr-link togiftr" data-bind="scope: 'giftr-addto__form'">
-                <a href="#" id="addto-giftr-new" class="action togiftr link-giftr" data-trigger="trigger-one" data-bind="click: defineBehaviour"><span><?= $block->getLabel() ?></span>
+                <a href="#" id="addto-giftr-new" class="action togiftr link-giftr" data-bind="click: addToGiftRegistryBehaviour"><span><?= $block->getLabel() ?></span>
                 </a>
             </div>
-            <div data-bind="mageInit: {
+            <div data-role="openGiftrModal" data-bind="mageInit: {
                 'Magento_Ui/js/modal/modal':{
                     'type': 'popup',
                     'innerScroll': true,
                     'modalClass': 'gift-regisry-theme',
                     'title': 'Select Gift Registry',
-                    'trigger': '[data-trigger=trigger-one]',
+                    'trigger': '',
                     'responsive': true
                 }}">
                 <div class="content add-to-giftr-new">
