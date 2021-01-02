@@ -1,0 +1,33 @@
+<?php
+/**
+ * @var Magento\Framework\View\Element\Template $block
+ * @var Magento\Framework\Escaper $escaper
+ */
+?>
+
+<div class="module-slider">
+    <div class="module-slider-title"
+         style="text-align: center; font-size: 24px">
+        <span class="title"><strong><?= $block->escapeHtml(__('Stepikova_Module Slider')) ?></strong></span>
+    </div>
+    <div data-mage-init='{"slider":{}}'>
+        <div class="module-slider-item">
+            <img src="<?php echo $this->getViewFileUrl('Stepikova_ModuleSlider::img/banner1.png'); ?>" alt="Banner-1"/>
+        </div>
+        <div class="module-slider-item">
+            <img src="<?php echo $this->getViewFileUrl('Stepikova_ModuleSlider::img/banner2.png'); ?>" alt="Banner-2"/>
+        </div>
+        <div class="module-slider-item">
+            <img src="<?php echo $this->getViewFileUrl('Stepikova_ModuleSlider::img/banner3.png'); ?>" alt="Banner-3"/>
+        </div>
+        <div class="module-slider-item">
+            <img src="<?php echo $this->getViewFileUrl('Stepikova_ModuleSlider::img/banner4.png'); ?>" alt="Banner-4"/>
+        </div>
+        <div class="module-slider-item">
+            <img src="<?php echo $this->getViewFileUrl('Stepikova_ModuleSlider::img/banner5.png'); ?>" alt="Banner-5"/>
+        </div>
+        <div class="module-slider-item">
+            <img src="<?php echo $this->getViewFileUrl('Stepikova_ModuleSlider::img/banner6.png'); ?>" alt="Banner-6"/>
+        </div>
+    </div>
+</div>
