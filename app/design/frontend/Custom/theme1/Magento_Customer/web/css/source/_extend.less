@@ -4,22 +4,82 @@
 
 & when (@media-common = true) {
 
-  // User-icon
-  .header.panel {
-    .header.links {
-      li {
-        a {
-          .lib-icon-font(
-            @_icon-font-content: '\f2c0',
-            @_icon-font: @font-family-fontello,
-            @_icon-font-size: 20px,
-            @_icon-font-color: @color-black,
-            @_icon-font-text-hide: true
-          );
+    // User-icon
+    .header.panel {
+        .header.links {
+            li {
+                a {
+                    .lib-icon-font(
+                        @_icon-font-content: @icon-fontello-user,
+                        @_icon-font: @font-family-fontello,
+                        @_icon-font-size: 20px,
+                        @_icon-font-color: @color-black,
+                        @_icon-font-text-hide: true
+                    );
+                }
+            }
         }
-      }
     }
-  }
+
+    .control {
+        position: relative;
+    }
+
+    .password-control {
+        .lib-url('images/view.svg');
+        background: url("@{url}") 0 0 no-repeat;
+        position: absolute;
+        top: 8px;
+        right: 6px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        z-index: 2;
+
+    }
+
+    .password-control.view {
+        .lib-url('images/no-view.svg');
+        background: url("@{url}") 0 0 no-repeat;
+    }
+
+    .password-control-confirm {
+        .lib-url('images/view.svg');
+        background: url("@{url}") 0 0 no-repeat;
+        position: absolute;
+        top: 8px;
+        right: 6px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .password-control-confirm.view {
+        .lib-url('images/no-view.svg');
+        background: url("@{url}") 0 0 no-repeat;
+    }
 }
 
 
+//
+//  Desktop
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .form.create.account.form-create-account {
+        .fieldset.create.info,
+        .fieldset.address,
+        .fieldset.create.account {
+            .lib-form-fieldset();
+
+            > .field {
+                .lib-form-field(
+                    @_type: block,
+                    @_column: true
+                );
+            }
+        }
+    }
+}
