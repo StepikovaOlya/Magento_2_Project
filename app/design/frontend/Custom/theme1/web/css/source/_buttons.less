@@ -1,0 +1,103 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    //  Using buttons mixins
+    button,
+    a.action.primary {
+        .lib-css(border-radius, @button__border-radius);
+    }
+
+    button {
+        &:not(.primary) {
+            .lib-css(box-shadow, none);
+
+            &:active {
+                .lib-css(box-shadow, @button__shadow-active);
+            }
+        }
+    }
+
+    body {
+        &:not(._keyfocus) {
+            button {
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    a.action.primary {
+        .lib-link-as-button();
+    }
+
+    .action.primary,
+    .action-primary {
+        .lib-button-primary(
+            @_button-background: @color-white,
+            @_button-border: @color-white,
+            @_button-color: @color-black,
+            @_button-gradient-color-start: false,
+            @_button-gradient-color-end: false,
+            @_button-color-hover: @color-white,
+            @_button-background-hover: @color-custom-grey3,
+            @_button-border-hover: @color-custom-grey3,
+            @_button-gradient-color-start-hover: false,
+            @_button-gradient-color-end-hover: false,
+            @_button-color-active: @color-white,
+            @_button-background-active: @color-custom-grey3,
+            @_button-border-active: @color-custom-grey3,
+            @_button-gradient-color-start-active: false,
+            @_button-gradient-color-end-active: false,
+            @_button-gradient: false,
+            @_button-gradient-direction: false,
+            @_button-font-weight: @font-weight__regular
+        );
+        .lib-css(box-shadow, ~'0 2px 8px 0 rgba(0, 0, 0, 0.2)');
+        text-transform: uppercase;
+
+    }
+
+    .action.primary[title="Add to Cart"],
+    .action-primary[title="Add to Cart"] {
+        .lib-button(
+            @_button-icon-use: true,
+            @_button-font-content: @icon-cart,
+            @_button-icon-font-position: before,
+            @_button-icon-font-color: @color-custom-contact
+        );
+        .lib-button-primary(
+            @_button-background: @color-white,
+            @_button-border: @color-white,
+            @_button-color: @color-black,
+            @_button-gradient-color-start: false,
+            @_button-gradient-color-end: false,
+            @_button-color-hover: @color-white,
+            @_button-background-hover: @color-custom-grey3,
+            @_button-border-hover: @color-custom-grey3,
+            @_button-gradient-color-start-hover: false,
+            @_button-gradient-color-end-hover: false,
+            @_button-color-active: @color-white,
+            @_button-background-active: @color-custom-grey3,
+            @_button-border-active: @color-custom-grey3,
+            @_button-gradient-color-start-active: false,
+            @_button-gradient-color-end-active: false,
+            @_button-gradient: false,
+            @_button-gradient-direction: false,
+            @_button-font-weight: @font-weight__regular
+        );
+        .lib-css(box-shadow, ~'0 2px 8px 0 rgba(0, 0, 0, 0.2)');
+        text-transform: uppercase;
+
+        &:before {
+            .lib-font-size(1.3em);
+            margin: 0 3px 0 0;
+        }
+
+    }
+
+
+}
