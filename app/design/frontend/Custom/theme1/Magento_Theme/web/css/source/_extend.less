@@ -4,10 +4,13 @@
 
 & when (@media-common = true) {
 
-    // Logo
+    // Header
+    .page-header {
+        margin-bottom: 0;
+    }
 
-    .logo {
-        margin-left: 25%;
+    .header.panel > .header.links > .authorization-link {
+        display: block;
     }
 
     // Minicart-icon
@@ -16,7 +19,7 @@
         .minicart-wrapper {
             .action.showcart {
                 .lib-icon-font(
-                    @_icon-font-content: '\f23d',
+                    @_icon-font-content: @icon-fontello-cart,
                     @_icon-font: @font-family-fontello,
                     @_icon-font-size: 20px,
                     @_icon-font-color: @color-black
@@ -27,6 +30,7 @@
                     .lib-css(background-color, @color-white);
 
                     .counter-number {
+                        .lib-css(color, @color-custom-red1);
                         text-shadow: none;
 
                         &:before {
@@ -62,10 +66,9 @@
         text-align: center;
 
         .trending-title {
-            font-weight: @font-weight__light;
-            text-transform: uppercase;
+            .lib-css(font-weight, @font-weight__light);
             .lib-font-size(30);
-            font-size: 30px;
+            text-transform: uppercase;
             display: inline-block;
 
             &:after {
@@ -81,13 +84,12 @@
 
         .product.data.items {
             > .item.content {
-                border: 1px solid transparent;
+                .lib-css(border, 1px solid transparent);
             }
 
             > .item.title > .switch {
                 .lib-css(background, transparent);
                 border: 0;
-
             }
 
         }
@@ -177,7 +179,7 @@
         li.icons-facebook {
             a {
                 .lib-icon-font(
-                    @_icon-font-content: '\f09a',
+                    @_icon-font-content: @icon-fontello-fb,
                     @_icon-font: @font-family-fontello,
                     @_icon-font-size: 24px,
                     @_icon-font-color: @color-custom-social-icon
@@ -188,7 +190,7 @@
         li.icons-vimeo {
             a {
                 .lib-icon-font(
-                    @_icon-font-content: '\f27d',
+                    @_icon-font-content: @icon-fontello-vimeo,
                     @_icon-font: @font-family-fontello,
                     @_icon-font-size: 24px,
                     @_icon-font-color: @color-custom-social-icon
@@ -199,7 +201,7 @@
         li.icons-gplus {
             a {
                 .lib-icon-font(
-                    @_icon-font-content: '\f0d5',
+                    @_icon-font-content: @icon-fontello-gplus,
                     @_icon-font: @font-family-fontello,
                     @_icon-font-size: 24px,
                     @_icon-font-color: @color-custom-social-icon
@@ -210,7 +212,7 @@
         li.icons-twitter {
             a {
                 .lib-icon-font(
-                    @_icon-font-content: '\f099',
+                    @_icon-font-content: @icon-fontello-twitter,
                     @_icon-font: @font-family-fontello,
                     @_icon-font-size: 24px,
                     @_icon-font-color: @color-custom-social-icon
@@ -221,7 +223,7 @@
         li.icons-pinterest {
             a {
                 .lib-icon-font(
-                    @_icon-font-content: '\f231',
+                    @_icon-font-content: @icon-fontello-pinterest,
                     @_icon-font: @font-family-fontello,
                     @_icon-font-size: 24px,
                     @_icon-font-color: @color-custom-social-icon
@@ -232,7 +234,7 @@
         li.icons-youtube {
             a {
                 .lib-icon-font(
-                    @_icon-font-content: '\f16a',
+                    @_icon-font-content: @icon-fontello-youtube,
                     @_icon-font: @font-family-fontello,
                     @_icon-font-size: 24px,
                     @_icon-font-color: @color-custom-social-icon
@@ -244,7 +246,7 @@
     .copyright {
         .lib-css(color, @color-black);
         .lib-css(background-color, @color-white);
-        font-size: 14px;
+        .lib-font-size(14);
     }
 
 }
@@ -275,6 +277,25 @@
         }
     }
 
+    .header.content {
+        .panel.header {
+            .header.links {
+                .link.authorization-link {
+                    display: block;
+                }
+
+                .customer-welcome {
+                    .action.switch {
+                        .lib-css(color, @color-black);
+                        position: absolute;
+                        left: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+
     // Navigarion
 
     .nav-sections {
@@ -291,6 +312,17 @@
         }
     }
 
+    // Main
+
+    .page-main {
+        margin-top: -30px;
+    }
+    // Tabs widget
+
+    .product.data.items > .item.title.active {
+        margin-left: 250px;
+    }
+
     // Footer
 
     .page-footer,
@@ -299,7 +331,6 @@
         .lib-css(background-color, @color-white);
         .lib-font-size(14);
     }
-
 
 }
 

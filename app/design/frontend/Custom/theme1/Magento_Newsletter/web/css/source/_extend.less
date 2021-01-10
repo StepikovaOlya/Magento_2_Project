@@ -53,11 +53,12 @@
         .action.subscribe {
             .lib-css(background-color, @color-custom-grey4);
             .lib-css(border-color, @color-custom-grey4);
+            .lib-css(box-shadow, ~'0 0 0 0 rgba(0, 0, 0, 0.2)');
             padding: 20px;
 
             :after {
                 .lib-css(color, @color-custom-red1);
-                .lib-css(font-weight, @font-weight__heavier * 2);
+                .lib-css(font-weight, @font-weight__heavier);
                 .lib-font-size(18);
                 content: '→';
             }
@@ -66,13 +67,15 @@
                 .lib-css(color, @color-black);
                 .lib-css(font-weight, @font-weight__heavier);
                 text-transform: uppercase;
-
-
             }
+
+        }
+
+        .action.primary:before,
+        .action-primary:before {
+            .lib-css(color, @color-custom-grey4);
         }
     }
-
-
 }
 
 

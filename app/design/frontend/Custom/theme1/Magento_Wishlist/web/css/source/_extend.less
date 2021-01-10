@@ -1,0 +1,21 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    // Icon Wishlist was overridden
+
+    .product-social-links,
+    .block-bundle-summary,
+    .product-item,
+    .table-comparison {
+        .action.towishlist {
+            &:extend(.abs-actions-addto all);
+            .lib-icon-font(
+                @_icon-font-content: @icon-fontello-heart-empty,
+                @_icon-font: @font-family-fontello
+            );
+        }
+    }
+}

@@ -7,10 +7,10 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .ves-megamenu .navigation .level0 > a:after {
-        border-bottom: 10px solid @color-custom-grey2;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
+    .ves-megamenu .navigation .level0:not(:first-child) > a:after {
+        .lib-css(border-bottom, 10px solid @color-custom-grey2);
+        .lib-css(border-left, 10px solid transparent);
+        .lib-css(border-right, 10px solid transparent);
         border-top: none;
         content: '';
         display: block;

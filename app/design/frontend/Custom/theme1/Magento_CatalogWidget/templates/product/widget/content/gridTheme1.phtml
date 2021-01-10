@@ -85,7 +85,7 @@ use Magento\Framework\App\Action\Action;
                                                             <button type="submit"
                                                                     title="<?= $block->escapeHtml(__('Add to Cart')) ?>"
                                                                     class="action tocart primary">
-                                                                <span><i class="fas fa-cart-plus"></i><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                                <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
                                                             </button>
                                                             <div class="actions-secondary" data-role="add-to-links">
                                                                 <?php if ($this->helper(\Magento\Wishlist\Helper\Data::class)->isAllow() && $showWishlist) : ?>
