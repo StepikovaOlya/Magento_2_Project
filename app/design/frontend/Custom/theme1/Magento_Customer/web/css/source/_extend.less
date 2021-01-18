@@ -25,7 +25,8 @@
         position: relative;
     }
 
-    .password-control {
+    .password-control,
+    .password-control-confirm {
         .lib-url('images/view.svg');
         background: url("@{url}") 0 0 no-repeat;
         position: absolute;
@@ -38,27 +39,12 @@
 
     }
 
-    .password-control.view {
-        .lib-url('images/no-view.svg');
-        background: url("@{url}") 0 0 no-repeat;
-    }
-
-    .password-control-confirm {
-        .lib-url('images/view.svg');
-        background: url("@{url}") 0 0 no-repeat;
-        position: absolute;
-        top: 8px;
-        right: 6px;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-
-    }
-
+    .password-control.view,
     .password-control-confirm.view {
         .lib-url('images/no-view.svg');
         background: url("@{url}") 0 0 no-repeat;
     }
+
 }
 
 
