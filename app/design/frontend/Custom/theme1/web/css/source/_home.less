@@ -12,7 +12,7 @@
 
         .slider-item {
             .lib-css(background-color, @color-custom-grey2);
-            height: 500px;
+            height: 350px;
             text-align: center;
             padding-top: 100px;
 
@@ -59,6 +59,18 @@
                     .lib-font-size(10);
                     text-transform: uppercase;
                 }
+            }
+
+            .title-slider-counter {
+                float: right;
+                margin: 20% 2% 0 2%;
+                width: 20%;
+            }
+
+            .slider-counter {
+                float: right;
+                margin: 90% 2% 0 2%;
+                width: 20%;
             }
         }
     }
@@ -283,6 +295,7 @@
         margin-top: -30px;
 
         .slider-item {
+            height: 500px;
 
             .title {
                 .lib-font-size(100);
@@ -309,20 +322,26 @@
                 }
 
             }
+
+            .title-slider-counter {
+                margin: 3% 2% 0 2%;
+            }
+
+            .slider-counter {
+                margin: 20% 2% 0 2%;
+            }
         }
     }
     .slider-dots {
+        .lib-rotate(
+            @_rotation: 90deg;
+        );
         position: absolute;
         bottom: 100px;
         display: block;
         padding: 0;
         list-style: none;
         text-align: right;
-        -moz-transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
         width: 100px;
         right: 100px;
     }
