@@ -16,7 +16,7 @@ define([
 
             if (!this.isLoggedIn()) {
                 $("#addto-giftr-new").redirectUrl({url: this.loginUrl});
-            } else if (this.registries().length == 1) {
+            } else if (this.registries().length === 1) {
                 event.stopPropagation();
                 this.addProduct();
             } else {
